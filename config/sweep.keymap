@@ -119,7 +119,7 @@
             &kp N1     &kp N2     &kp N3     &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ │        │  @       │  ·       │  4       │  0       │   │          │          │          │          │          │
-           &kp RA(N1) &kp RA(N2) &kp RA(N3) &kp LC(LA(N4)) &kp N0      &trans     &trans     &trans     &trans     &trans
+           &kp RA(N1) &kp RA(N2) &kp RA(N3) &kp RA(E)   &kp N0         &kp DEL     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans    &caps_word      &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -136,7 +136,7 @@
             &kp EXCL   &kp LARW    &kp DARW  &kp RARW  &kp RBKT       &kp PLUS   &kp UNDER  &kp EQUAL  &kp EXCL    &kp BSLH
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  &       │  _       │  <       │  >       │ '        │
-            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp NUBS &kp LS(NUBS) &kp MINUS
+            &trans     &trans     &trans     &trans    &kp TILDE      &kp AMPS   &kp UNDER  &kp NUBS &kp LS(NUBS) &kp MINUS
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &to 4          &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯

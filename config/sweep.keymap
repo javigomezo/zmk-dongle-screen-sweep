@@ -135,8 +135,8 @@
         //│  !       │  LEFT    │  DOWN    │  RIGHT   │ +        │   │  ¿       │  ?       │  ¡       │  !       │  ç       │
             &kp EXCL   &kp LARW    &kp DARW  &kp RARW  &kp RBKT       &kp PLUS   &kp UNDER  &kp EQUAL  &kp EXCL    &kp BSLH
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  &       │  _       │  <       │  >       │ '        │
-            &trans     &trans     &trans     &trans    &kp TILDE      &kp AMPS   &kp UNDER  &kp NUBS &kp LS(NUBS) &kp MINUS
+        //│          │          │          │          │          │   │  &       │  ~       │  <       │  >       │ '        │
+            &trans     &trans     &trans     &trans    &kp TILDE     &kp RA(GRAVE) &kp RA(N4) &kp NUBS &kp LS(NUBS) &kp MINUS
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &to 4          &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯

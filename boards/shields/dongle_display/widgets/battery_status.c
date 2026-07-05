@@ -44,12 +44,12 @@ struct battery_object {
     lv_obj_t *symbol;
     lv_obj_t *label;
 } battery_objects[ZMK_SPLIT_BLE_PERIPHERAL_COUNT + SOURCE_OFFSET];
-
+    
 static lv_color_t battery_image_buffer[ZMK_SPLIT_BLE_PERIPHERAL_COUNT + SOURCE_OFFSET][BUFFER_SIZE];
 
 static void draw_battery(lv_obj_t *canvas, uint8_t level, bool usb_present) {
     lv_canvas_fill_bg(canvas, lv_color_black(), LV_OPA_COVER);
-
+    
     lv_layer_t layer;
     lv_canvas_init_layer(canvas, &layer);
 
@@ -68,7 +68,7 @@ static void draw_battery(lv_obj_t *canvas, uint8_t level, bool usb_present) {
 
     lv_area_t rect_coords;
     bool rect_draw = true;
-
+    
     if (level <= 10 || usb_present) {
         rect_coords = (lv_area_t){1, 2, 3, 6};
     } else if (level <= 30) {
@@ -100,7 +100,7 @@ static void set_battery_symbol(lv_obj_t *widget, struct battery_state state) {
 
     draw_battery(symbol, state.level, state.usb_present);
     lv_label_set_text_fmt(label, "%4u%% ", state.level);
-
+    
     if (state.level > 0 || state.usb_present) {
         lv_obj_clear_flag(symbol, LV_OBJ_FLAG_HIDDEN);
         lv_obj_move_foreground(symbol);
@@ -136,7 +136,7 @@ static struct battery_state central_battery_status_get_state(const zmk_event_t *
     };
 }
 
-static struct battery_state battery_status_get_state(const zmk_event_t *eh) {
+static struct battery_state battery_status_get_state(const zmk_event_t *eh) { 
     if (as_zmk_peripheral_battery_state_changed(eh) != NULL) {
         return peripheral_battery_status_get_state(eh);
     } else {
@@ -175,7 +175,7 @@ int zmk_widget_dongle_battery_status_init(struct zmk_widget_dongle_battery_statu
 
         lv_obj_add_flag(image_canvas, LV_OBJ_FLAG_HIDDEN);
         lv_obj_add_flag(battery_label, LV_OBJ_FLAG_HIDDEN);
-
+        
         battery_objects[i] = (struct battery_object){
             .symbol = image_canvas,
             .label = battery_label,

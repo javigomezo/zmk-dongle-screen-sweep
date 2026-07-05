@@ -18,15 +18,15 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #include "modifiers.h"
 
-struct modifiers_state {
+struct modifiers_state {    
     uint8_t modifiers;
 };
 
-struct modifier_symbol {
+struct modifier_symbol {    
     uint8_t modifier;
     const lv_img_dsc_t *symbol_dsc;
     lv_obj_t *symbol;
-    lv_obj_t *selection_line;
+    lv_obj_t *selection_line; 
     bool is_active;
 };
 
@@ -139,7 +139,7 @@ int zmk_widget_modifiers_init(struct zmk_widget_modifiers *widget, lv_obj_t *par
     widget->obj = lv_obj_create(parent);
 
     lv_obj_set_size(widget->obj, NUM_SYMBOLS * (SIZE_SYMBOLS + 1) + 1, SIZE_SYMBOLS + 3);
-
+    
     static lv_style_t style_line;
     lv_style_init(&style_line);
     lv_style_set_line_width(&style_line, 2);

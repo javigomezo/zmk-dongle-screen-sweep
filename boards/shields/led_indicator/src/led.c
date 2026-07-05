@@ -20,10 +20,10 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #define LED_GPIO_NODE_ID DT_COMPAT_GET_ANY_STATUS_OKAY(gpio_leds)
 
-//BUILD_ASSERT(DT_NODE_EXISTS(DT_ALIAS(indicator_led)), "An alias for the indicator LED is not found for LED_INDICATOR");
+BUILD_ASSERT(DT_NODE_EXISTS(DT_ALIAS(indicator_led)), "An alias for the indicator LED is not found for LED_INDICATOR");
 
 static const struct device *led_dev = DEVICE_DT_GET(LED_GPIO_NODE_ID);
-static const uint8_t led_idx = DT_NODE_CHILD_IDX(DT_ALIAS(&blue_led));
+static const uint8_t led_idx = DT_NODE_CHILD_IDX(DT_ALIAS(indicator_led));
 
 static bool initialized = false;
 

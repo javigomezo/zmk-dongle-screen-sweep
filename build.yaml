@@ -3,24 +3,24 @@
 include:
 
   # sweep
-  - board: nice_nano
+  - board: nrfmicro_13
     shield: sweep_central_dongle dongle_display
     artifact-name: sweep_central_dongle
-  - board: nice_nano
+  - board: nrfmicro_13
     shield: sweep_central_left led_indicator
     artifact-name: sweep_central_left
-  - board: nice_nano
+  - board: nrfmicro_13
     shield: sweep_peripheral_left led_indicator
     artifact-name: sweep_peripheral_left
-  - board: nice_nano
+  - board: nrfmicro_13
     shield: sweep_peripheral_right led_indicator
     artifact-name: sweep_peripheral_right
 
-  - board: nice_nano
+  - board: nrfmicro_13
     shield: sweep_central_left led_indicator
     cmake-args: -DCONFIG_ZMK_USB_LOGGING=n
     artifact-name: sweep_central_left_with_logging
 
   # reset
-  - board: nice_nano
+  - board: nrfmicro_13
     shield: settings_reset

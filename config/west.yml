@@ -13,7 +13,7 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-      
+
     # modules
     - name: zmk-rgbled-widget
       remote: caksoylar
@@ -23,9 +23,9 @@ manifest:
       revision: main
     - name: zmk-dongle-display
       remote: englmaxi
-      revision: win
-    - name: zmk-hid-trackball-interface
-      remote: englmaxi
       revision: main
+    # - name: zmk-hid-trackball-interface
+    #   remote: englmaxi
+    #   revision: main
   self:
     path: config
